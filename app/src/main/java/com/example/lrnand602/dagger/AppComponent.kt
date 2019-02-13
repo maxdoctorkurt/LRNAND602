@@ -9,5 +9,5 @@ import com.example.lrnand602.dagger.scopes.ActivityScope
 @Component(modules = [AppModule::class])
 interface AppComponent {
     fun getApp(): App
-    fun inject(activity: MainActivity)
+//    fun inject(activity: MainActivity)
 }

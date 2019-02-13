@@ -11,6 +11,6 @@ import dagger.Provides
 @Module
 abstract class ActivityModule {
     @Binds
-    @ActivityScope
+//    @ActivityScope
     abstract fun bindsPresenter(presenter: Presenter): IPresenter
 }

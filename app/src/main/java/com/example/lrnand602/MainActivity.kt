@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.lrnand602.app.IPresenter
 import com.example.lrnand602.app.Presenter
+import com.example.lrnand602.dagger.ActivityComponent
 import com.example.lrnand602.dagger.AppComponent
 import java.util.logging.Logger
 import javax.inject.Inject
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var presenter: IPresenter
 
     init {
-        getAppComponent().inject(this)
+        getActivityComponent().inject(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         Logger.getGlobal().info(presenter.getData())
     }
 
-    private fun getAppComponent(): AppComponent {
-        return App.instance.appComponent
+    private fun getActivityComponent(): ActivityComponent {
+        return App.instance.activityComponent
     }
 }
