@@ -5,6 +5,7 @@ import com.example.lrnand602.dagger.ActivityComponent
 import com.example.lrnand602.dagger.AppComponent
 import com.example.lrnand602.dagger.DaggerActivityComponent
 import com.example.lrnand602.dagger.DaggerAppComponent
+import com.example.lrnand602.dagger.modules.ActivityModule
 import com.example.lrnand602.dagger.modules.AppModule
 import java.util.logging.Logger
 

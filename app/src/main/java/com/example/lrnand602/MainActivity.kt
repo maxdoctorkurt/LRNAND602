@@ -2,6 +2,7 @@ package com.example.lrnand602
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.lrnand602.app.IPresenter
 import com.example.lrnand602.app.Presenter
 import com.example.lrnand602.dagger.AppComponent
 import java.util.logging.Logger
@@ -10,7 +11,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var presenter: Presenter
+    lateinit var presenter: IPresenter
 
     init {
         getAppComponent().inject(this)

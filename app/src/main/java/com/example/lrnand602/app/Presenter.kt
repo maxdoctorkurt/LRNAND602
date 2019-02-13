@@ -1,11 +1,13 @@
 package com.example.lrnand602.app
 
 import com.example.lrnand602.App
+import com.example.lrnand602.dagger.scopes.ActivityScope
 import javax.inject.Inject
 
-class Presenter @Inject constructor(private val app: App) {
+@ActivityScope
+class Presenter @Inject constructor(private val app: App): IPresenter {
 
-    fun getData(): String {
+    override fun getData(): String {
         return "*** Hello! ${app.applicationContext}"
     }
 
