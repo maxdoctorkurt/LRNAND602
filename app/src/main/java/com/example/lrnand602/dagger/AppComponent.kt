@@ -4,6 +4,7 @@ import com.example.lrnand602.App
 import dagger.Component
 import com.example.lrnand602.MainActivity
 import com.example.lrnand602.dagger.modules.AppModule
+import com.example.lrnand602.dagger.scopes.ActivityScope
 
 @Component(modules = [AppModule::class])
 interface AppComponent {
